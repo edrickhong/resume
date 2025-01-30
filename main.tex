@@ -1,4 +1,4 @@
-%-------------------------
+%--------------------
 % Resume in Latex
 % Author : Matty
 % Based on: https://github.com/jakegut/resume (which was based on https://github.com/sb2nov/resume)
@@ -103,7 +103,7 @@
   \vspace{-4pt}
   \color{gray}
   \item
-  Last Updated on August 12th, 2023
+  Last Updated on January 30th, 2024
 \end{flushright}
 
 \vspace{-7pt}
@@ -142,11 +142,11 @@
  \begin{itemize}[leftmargin=0.15in, label={}]
     \small{\item{
     
-     \textbf{Languages}{: C/C++, C\#, Java, Python, TypeScript, Lua, Rust, SQL, HLSL/GLSL, Bash/Batch, \LaTeX} \\
+     \textbf{Languages}{: C/C++, C\#, Java, Python, Javascript, TypeScript, Rust, SQL, HLSL/GLSL, Bash/Batch} \\
      
-     \textbf{Tools}{: Git, Unix Shell, SSH, DBeaver, AWS S3, AWS Rekognition, CMake/Make, Maven, Ninja} \\
+     \textbf{Tools}{: PowerBI, Kubernetes, Git, Linux/Unix Shell, SSH, DBeaver, AWS S3, CMake/Make, Maven} \\
      
-      \textbf{API/Libraries}{: Android SDK, Apache Spark, OpenGL, Vulkan, pandas, Numpy, Pytorch, Matplotlib} \\
+      \textbf{API/Libraries}{: Android SDK, Apache Spark, CUDA, Vulkan, pandas, Numpy, pytorch, Matplotlib} \\
      
     }}
  \end{itemize}
@@ -158,29 +158,22 @@
         \resumeProjectHeading
           {\textbf{S\&P Global} $|$ \footnotesize\emph{Software Engineer Intern}\vspace{8pt}}{June -- August 2023}
         \resumeItemListStart
-            \resumeItem{Built data processing pipelines with Apache Spark to handle terabytes of data from company data prediction models}
-            \resumeItem{Automated the execution of the pipelines and the storage of resulting data via Sharepoint's REST API using PowerAutomate}
-            \resumeItem{Integrated processed data into PowerBI dashboards to analyze the performance of prediction models and identify errors in predictions and data}
+	    \resumeItem{Leveraged AWS and Apache Spark to design large scale data pipelines to analyze terabytes of S\&P's prediction model data on parallelized clusters}
+            \resumeItem{Enhanced efficiency by automating the execution of pipelines and the storage of resulting data via Sharepoint's REST API and PowerAutomate}
+            \resumeItem{Enhanced efficiency by scheduling data updates and processing with Apache Airflow and integrating results to PowerBI for real-time model evaluation }
         \resumeItemListEnd
 
         \resumeProjectHeading
           {\textbf{NYU Future Reality Labs}\vspace{8pt} $|$ \footnotesize\emph{Research Assistant}}{August 2022 -- May 2023}
         \resumeItemListStart
-            \resumeItem{Assisted with low-level graphics technologies including path guided GPU accelerated particle effects in Vulkan and GLSL}
+            \resumeItem{Optimized performance of particle simulations via parallelized GPU with user defined particle paths and collision detection through Vulkan compute shaders}
 	    \resumeItem{Designed and implemented a colony simulation in C++ with A* pathfinding to explore NLP driven user interactions}
         \resumeItemListEnd
 
         \resumeProjectHeading
-          {\textbf{Singapore Armed Forces} $|$ \footnotesize\emph{Corporal}\vspace{8pt}}{2018 -- 2020}
-        \resumeItemListStart
-            \resumeItem{Served as a transport operator in operations such as the 2018 Trump-Kim Summit as part of the security detail}
-        \resumeItemListEnd
-
-        \resumeProjectHeading
-          {\textbf{Quantum Inventions} $|$ \footnotesize\emph{Graphics Intern}\vspace{8pt}}{2018}
+          {\textbf{Quantum Inventions} $|$ \footnotesize\emph{Graphics Intern}\vspace{8pt}}{March 2018 -- June 2018}
         \resumeItemListStart
             \resumeItem{Automated the generation of profiling metrics and fixed critical bugs for the 3D rendering backend of the navigation Android app Galactio using Java, C++, GLSL, Python}
-            \resumeItem{Developed a Bezier Curve library in C++ to enhance the visual quality of curved paths in the app}
         \resumeItemListEnd
           
     \resumeSubHeadingListEnd 
@@ -188,18 +181,19 @@
 % -------------------- PROJECTS --------------------
 \section{Extracurricular/Projects} %TODO: maybe add capstone project etc
     \resumeSubHeadingListStart
-    
+
         \resumeProjectHeading
-        {\textbf{\href{https://ldjam.com/events/ludum-dare/51/untitled-cat-game}{Ludum Dare 51}} $|$ \footnotesize\emph{GameMaker, GMLScript}}{May 2023 -- Present}
+        {\textbf{Capstone Project: Spotify Genre Classification} $|$ \footnotesize\emph{Python, Scikit-learn}}{May 2024}
         \resumeItemListStart
-            \resumeItem{Gameplay programmer: wrote main gameplay mechanics such as tile-based movement and enemy pathing}
+            \resumeItem{Developed a genre classification model using a Random Forest Classifier, achieving a ROC AUC score of 0.89 on Spotify song data}
+            \resumeItem{Processed the data using LDA for dimensionality reduction and K-Means clustering to identify further genre similarities and differences based on song characteristics}
         \resumeItemListEnd
+    
           
         \resumeProjectHeading
         {\textbf{HopHacks} $|$ \footnotesize\emph{Python, AWS Rekognition}}{August 2022}
         \resumeItemListStart
-            \resumeItem{Collaborated on a fashion application that uses AWS Rekognition computer vision to recognize and match clothing by type and color}
-            \resumeItem{Developed a search and best match algorithm to pair articles of clothing based on pre-existing outfit trends}
+            \resumeItem{Collaborated on a fashion application that uses AWS Rekognition for computer vision-based clothing recognition, implementing a best-match algorithm for outfit pairing based on existing fashion trends}
         \resumeItemListEnd
           
         \resumeProjectHeading
@@ -209,9 +203,10 @@
         \resumeItemListEnd
 
         \resumeProjectHeading
-        {\textbf{\href{https://github.com/edrickhong}{Github Projects}} $|$ \footnotesize\emph{C/C++, GLSL, CMake, Vulkan}}{August 2022}
+        {\textbf{\href{https://github.com/edrickhong}{Github Projects}} $|$ \footnotesize\emph{C/C++, GLSL, CMake, Vulkan}}{Present}
         \resumeItemListStart
-            \resumeItem{Developed a cross-platform game engine in C++ utilizing the Vulkan API. Features virtual texturing and multithreaded job queue with pthreads/Win32 threads and lockless operations}
+            \resumeItem{Developed a cross-platform game engine in C++ utilizing the Vulkan API. Features virtual texturing and multithreaded job queue with pthreads/Win32 threads and lockless operations using SIMD intrinsics}
+	    \resumeItem{Built a custom C parser to enable real-time code introspection and editing on a compiled language (C++) and automatic code generation}
         \resumeItemListEnd
     \resumeSubHeadingListEnd
 
